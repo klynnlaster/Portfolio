@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telco Customer Churn Prediction</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('AppleGaramond.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'CustomFont', serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(59, 45, 121, 0.829);
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex; /* Enable flexbox layout */
+            justify-content: space-between; /* Align h1 and ul to opposite ends */
+            align-items: center; /* Align items vertically */
+        }
+
+        nav h1 {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0; /* Remove default margin for proper alignment */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: right;
+            list-style: none;
+            margin: 0; /* Remove default margin for proper alignment */
+            padding: 0; /* Remove default padding */
+        }
+
+        nav ul li {
+            margin: 0 1rem; /* Adjust spacing between list items */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem; /* Add padding for better clickable area */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
+            color: rgb(162, 0, 255); /* Optional: Change text color when hovered */
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #insights a {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #9300a0;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #insights a:hover {
+            background: #6a0074;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            text-align: left;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #9300a0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #call-to-action {
+            display: flex; /* Enable flexbox layout */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center elements vertically */
+            align-items: center; /* Center elements horizontally */
+            text-align: center; /* Ensure text is centered */
+            padding: 2rem; /* Add padding for spacing */
+        }
+
+        #call-to-action a {
+            text-align: center;
+            justify-content: center;
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #9300a0;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #call-to-action a:hover {
+            background: #6a0074;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>KL | Transforming Data</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+        </ul>
+    </nav>
+
+    <section id="project-title">
+        <h1>Telco Customer Churn Prediction</h1>
+        <p>Developed an interactive dashboard and predictive model to identify customers likely to churn. Achieved 77% accuracy using a Random Forest model.</p>
+    </section>
+
+    <section id="problem-statement">
+        <h2>Problem Statement</h2>
+        <p>Customer churn is a critical issue in the telecommunications industry. This project aims to identify the key factors influencing customer churn and develop a predictive model to help retain at-risk customers.</p>
+    </section>
+
+    <section id="methodology">
+        <h2>Methodology</h2>
+        <ul>
+            <li>Cleaned and preprocessed the dataset, addressing missing and inconsistent values.</li>
+            <li>Conducted exploratory data analysis to identify trends, such as the impact of tenure and monthly charges on churn.</li>
+            <li>Used SMOTE to handle imbalanced data for better model performance.</li>
+            <li>Built a Random Forest model and fine-tuned hyperparameters using GridSearchCV.</li>
+        </ul>
+    </section>
+
+    <section id="insights">
+        <h2>Key Insights and Results</h2>
+        <ul>
+            <li>Achieved 77% accuracy in predicting customer churn.</li>
+            <li>Key contributors to churn include rude support, contract type, monthly charges, and tenure.</li>
+            <li>Customers with with Fiber Optic Internet Service and no technical support are more likely to churn.</li>
+            <li>Customers with short tenures and high monthly charges are more likely to churn also.</li>
+        </ul>
+        <img src="CRTelco.png" alt="Classification Report" style="width:100%; margin-top: 1rem;">
+        <img src="Dashboard 2.png" alt="Dashboard Screenshot" style="width:100%; margin-top: 1rem;">
+        <a href="https://public.tableau.com/app/profile/kayanna.laster/viz/TelcoCustomerChurn_17374876089950/Dashboard2?publish=yes" target="_blank">Interact With Dashboard</a>
+    </section>
+
+    <section id="technologies">
+        <h2>Technologies Used</h2>
+        <p>Python, pandas, scikit-learn, Matplotlib, Seaborn, SMOTE, Random Forest, GridSearchCV.</p>
+    </section>
+
+    <section id="call-to-action">
+        <h2>Return To Projects</h2>
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kayanna Laster. All rights reserved.</p>
+    </footer>
+</body>
+</html>

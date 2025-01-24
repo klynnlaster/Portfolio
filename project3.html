@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Network Security Simulation</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('AppleGaramond.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'CustomFont', serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(59, 45, 121, 0.829);
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex; /* Enable flexbox layout */
+            justify-content: space-between; /* Align h1 and ul to opposite ends */
+            align-items: center; /* Align items vertically */
+        }
+
+        nav h1 {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0; /* Remove default margin for proper alignment */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: right;
+            list-style: none;
+            margin: 0; /* Remove default margin for proper alignment */
+            padding: 0; /* Remove default padding */
+        }
+
+        nav ul li {
+            margin: 0 1rem; /* Adjust spacing between list items */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem; /* Add padding for better clickable area */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
+            color: rgb(162, 0, 255); /* Optional: Change text color when hovered */
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #key-insights a {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #9300a0;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #key-insights a:hover {
+            background: #6a0074;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            text-align: left;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #9300a0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #call-to-action {
+            display: flex; /* Enable flexbox layout */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center elements vertically */
+            align-items: center; /* Center elements horizontally */
+            text-align: center; /* Ensure text is centered */
+            padding: 2rem; /* Add padding for spacing */
+        }
+
+        #call-to-action a {
+            text-align: center;
+            justify-content: center;
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #9300a0;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #call-to-action a:hover {
+            background: #6a0074;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>KL | Transforming Data</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+        </ul>
+    </nav>
+
+    <section id="project-title">
+        <h1>Interactive Network Security Simulation</h1>
+        <p>An interactive tool to simulate network security scenarios by visualizing packet flow, block rates, and firewall behavior.</p>
+    </section>
+    
+    <section id="problem-statement">
+        <h2>Problem Statement</h2>
+        <p>Securing network traffic is critical for maintaining system reliability and protecting sensitive data. This project simulates packet flow through a network, allowing users to visualize and analyze the impact of firewalls and security rules on data flow.</p>
+    </section>
+    
+    <section id="methodology">
+        <h2>Methodology</h2>
+        <ul>
+            <li>Created a network graph using NetworkX to represent nodes (e.g., client, router, firewall, server) and connections.</li>
+            <li>Simulated packet flow with customizable parameters, such as the number of packets and firewall rules.</li>
+            <li>Visualized the results using interactive pie charts and network topology diagrams.</li>
+            <li>Implemented interactivity with Streamlit for real-time user adjustments and analysis.</li>
+        </ul>
+    </section>
+    
+    <section id="key-insights">
+        <h2>Key Insights and Results</h2>
+        <ul>
+            <li>Provided insights into the effectiveness of firewall rules in blocking or allowing packets.</li>
+            <li>Helped users visualize network performance under different configurations.</li>
+            <li>Highlighted the importance of balancing security with performance for optimal network behavior.</li>
+        </ul>
+        <img src="network.png" alt="Network Topology Diagram" style="width:100%; margin-top: 1rem;">
+        <a href="https://interactive-network-security-simulation-8knjogklxnkzuvcttbcvbp.streamlit.app" target="_blank">Interact With Tool</a>
+    </section>
+    
+    <section id="challenges">
+        <h2>Challenges and Learnings</h2>
+        <p>Simulating dynamic network behavior required careful consideration of real-world scenarios. Handling user-defined parameters in real-time while maintaining performance was a significant challenge. This project deepened my understanding of networking concepts and interactive data visualization tools.</p>
+    </section>
+    
+    <section id="technologies">
+        <h2>Technologies Used</h2>
+        <p>Python, NetworkX, Matplotlib, Streamlit.</p>
+    </section>
+    
+    <section id="call-to-action">
+        <h2>Return to Projects</h2>
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Kayanna Laster. All rights reserved.</p>
+    </footer>
+</body>
+</html>
