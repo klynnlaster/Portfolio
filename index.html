@@ -320,7 +320,8 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
+        <form action="YOUR_FORMSPREE_ENDPOINT_URL" method="POST">
+            <input type="email" name="_replyto" placeholder="Your Email" required>
             <input type="text" name="name" placeholder="Your Name/Company" required>
             <textarea name="message" placeholder="Write me a short message..." required></textarea>
             <button type="submit">Send Message</button>
